@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -239,156 +240,51 @@ body {
 
 
 @media only screen and (min-width: 320px) {
-    .whatsapp {
-        position: fixed;
-        width: 50px;
-        height: 50px;
-        bottom: 50px;
-        right: 20px;
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 80px;
+    .card {
+        background: #191c29;
+        width: 300px;
+        height: 450px;
+        padding: 3px;
+        position: relative;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        font-size: 35px;
-        z-index: 1;
-    }
-    .whatsapp-icon {
-        margin-top: 5px;
-        font-size: 40px;
-        color: #f1fbff;
+        display: flex;
+        font-size: 1.5em;
+        color: rgb(88 199 250 / 0%);
+        cursor: pointer;
+        font-family: cursive;
     }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 480px) {}
 
-/* ************** */
-
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-    /* Styles Carrusel */
-    .w-100 {
-        height: 100%;
-        width: 100%;
-    }
-    .carousel-item {
-        height: 35vh;
-        min-height: 300px;
-    }
-    .carousel-caption {
-        bottom: 37px;
-    }
-    .carousel-caption h5 {
-        bottom: 37px;
-        font-size: 20px;
-    }
-    .carousel-caption p {
-        width: 100%;
-        font-size: 10px;
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-    /* Styles Carrusel */
-    .w-100 {
-        height: 100%;
-        width: 100%;
-    }
-    .carousel-item {
-        height: 35vh;
-        min-height: 300px;
-    }
-    .carousel-caption {
-        bottom: 37px;
-    }
-    .carousel-caption h5 {
-        bottom: 37px;
-        font-size: 20px;
-    }
-    .carousel-caption p {
-        width: 100%;
-        font-size: 10px;
-    }
-}
+@media only screen and (min-width: 480px) and (max-width: 768px) {}
 
 
 /* iPads (portrait and landscape) ----------- */
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    /* Styles Carrusel */
-    .w-100 {
-        /* imagenes carrusel */
-        height: 100%;
-        width: 100%;
-    }
-    .carousel-item {
-        height: 35vh;
-        min-height: 300px;
-    }
-    .carousel-caption {
-        bottom: 37px;
-    }
-    .carousel-caption p {
-        width: 100%;
-        font-size: 10px;
-    }
-}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}
 
-@media only screen and (min-width: 1025px) and (max-width: 1200px) {
-    /* Styles Carrusel */
-    .w-100 {
-        /* imagenes carrusel */
-        height: 100%;
-        width: 100%;
-    }
-    .carousel-item {
-        height: 35vh;
-        min-height: 300px;
-    }
-    .carousel-caption {
-        bottom: 37px;
-    }
-    .carousel-caption p {
-        width: 100%;
-        font-size: 10px;
-    }
-}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {}
 
 
-/* Desktops and laptops ----------- */
 
-@media only screen and (min-width: 1224px) {
-    /* Styles CArrusel*/
-    .w-100 {
-        /* imagenes carrusel */
-        height: 50vh;
-    }
-    .carousel-item {
-        height: 50vh;
-        min-height: 300px;
-    }
-    .carousel-caption {
-        bottom: 37px;
-    }
-    .carousel-caption p {
-        width: 100%;
-        font-size: 10px;
-    }
-    .carousel-caption h5 {
-        font-size: 50px;
-    }
-}
 
 
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
     inherits: false;
-  }
-  
-  :root {
+}
+
+:root {
     --card-height: 65vh;
     --card-width: calc(var(--card-height) / 1.5);
-  }
-  
-  body {
+}
+
+body {
     min-height: 100vh;
     background: #212534;
     display: flex;
@@ -397,12 +293,12 @@ body {
     padding-top: 2rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
-  }
-  
-  .card {
+}
+
+.card {
     background: #191c29;
-    width: var(--card-width);
-    height: var(--card-height);
+    width: 300px;
+    height: 450px;
     padding: 3px;
     position: relative;
     border-radius: 6px;
@@ -414,37 +310,36 @@ body {
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
     font-family: cursive;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     color: rgb(88 199 250 / 100%);
     transition: color 1s;
-  }
-  .card:hover:before,
-  .card:hover:after {
+}
+
+.card:hover:before,
+.card:hover:after {
     animation: none;
     opacity: 0;
-  }
-  
-  .card::before {
+}
+
+.card::before {
     content: "";
     width: 104%;
     height: 102%;
     border-radius: 8px;
-    background-image: linear-gradient(
-      var(--rotate),
-      #5ddcff,
-      #3c67e3 43%,
-      #4e00c2
-    );
+    background-image: linear-gradient(var(--rotate),
+            #5ddcff,
+            #3c67e3 43%,
+            #4e00c2);
     position: absolute;
     z-index: -1;
     top: -1%;
     left: -2%;
     animation: spin 2.5s linear infinite;
-  }
-  
-  .card::after {
+}
+
+.card::after {
     position: absolute;
     content: "";
     top: calc(var(--card-height) / 6);
@@ -456,31 +351,29 @@ body {
     margin: 0 auto;
     transform: scale(0.8);
     filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(
-      var(--rotate),
-      #5ddcff,
-      #3c67e3 43%,
-      #4e00c2
-    );
+    background-image: linear-gradient(var(--rotate),
+            #5ddcff,
+            #3c67e3 43%,
+            #4e00c2);
     opacity: 1;
     transition: opacity 0.5s;
     animation: spin 2.5s linear infinite;
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% {
-      --rotate: 0deg;
+        --rotate: 0deg;
     }
+
     100% {
-      --rotate: 360deg;
+        --rotate: 360deg;
     }
-  }
-  
-  a {
+}
+
+a {
     color: #212534;
     text-decoration: none;
     font-family: sans-serif;
     font-weight: bold;
     margin-top: 2rem;
-  }
-  
+}
