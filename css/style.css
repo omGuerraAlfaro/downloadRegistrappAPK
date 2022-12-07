@@ -27,7 +27,7 @@ body {
 
 .cellphoneContent:hover:before,
 .cellphoneContent:hover:after {
-    animation: none;
+    
     opacity: 1;
 }
 
@@ -68,7 +68,7 @@ body {
             #3c67e3 43%,
             #4e00c2);
     position: absolute;
-    z-index: -1;
+    z-index: -3;
     top: -1%;
     left: -2%;
     animation: spin 2.5s linear infinite;
@@ -81,7 +81,7 @@ body {
     top: calc(var(--card-height) / 6);
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: -3;
     height: 100%;
     width: 100%;
     margin: 0 auto;
