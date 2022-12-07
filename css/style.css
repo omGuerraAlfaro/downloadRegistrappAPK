@@ -26,8 +26,7 @@ body {
 }
 
 .cellphoneContent:hover:before,
-.cellphoneContent:hover:after {
-    
+.cellphoneContent:hover:after {    
     opacity: 1;
 }
 
@@ -99,7 +98,7 @@ body {
 
 
 .celular {
-    background-image: url(/img/celu2.png);
+    background-image: url('/img/celu2.png');
     background-repeat: no-repeat;
     background-size: contain;
     margin-left: 100px;
