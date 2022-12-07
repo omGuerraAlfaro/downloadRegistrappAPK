@@ -1,3 +1,8 @@
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
 body {
     min-height: 100vh;
     background: #212534;
@@ -9,20 +14,88 @@ body {
     box-sizing: border-box;
 }
 
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
 
+.cellphoneContent:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+}
+
+.cellphoneContent:hover:before,
+.cellphoneContent:hover:after {
+    animation: none;
+    opacity: 1;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
 
 .cellphoneContent {
     margin-top: 50px;
     margin-bottom: 100px;
     width: 600px;
     height: 550px;
-    border-radius: 67% 33% 41% 59% / 40% 26% 74% 60%  ;
+    border-radius: 67% 33% 41% 59% / 40% 26% 74% 60%;
     /* glass */
-    background: rgba(240, 240, 240, 0.849);
-    box-shadow: 0 8px 32px 0 rgba(147, 150, 189, 0.37);
+    background: rgba(240, 240, 240, 0);
+    /* box-shadow: 0 8px 32px 0 rgba(147, 150, 189, 0.37);*/
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
+
+.cellphoneContent::before {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 600px;
+    height: 550px;
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 67% 33% 41% 59% / 40% 26% 74% 60%;
+    background-image: linear-gradient(var(--rotate),
+            #5ddcff,
+            #3c67e3 43%,
+            #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+
+}
+
+.cellphoneContent::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(var(--rotate),
+            #5ddcff,
+            #3c67e3 43%,
+            #4e00c2);
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+}
+
 
 
 .celular {
@@ -35,7 +108,7 @@ body {
     width: 120%;
     height: 120%;
     transform: rotate(-15deg);
-    z-index: 3;
+    z-index: 3;    
 }
 
 
