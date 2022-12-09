@@ -45,6 +45,7 @@ body {
 }
 
 .cellphoneContent {
+    margin-left: 200px;
     margin-top: 50px;
     margin-bottom: 100px;
     width: 600px;
@@ -116,13 +117,20 @@ body {
 
 
 .titulo {
-    font-size: 80px;
+    font-size: 78px;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
 
+
+.parrafo{
+    margin-top: 20px;
+    font-size: smaller;
+    color: #ffffff;
+    text-align: start;
+}
 /* *********************************** */
 
 .buttonAnimated {
@@ -171,6 +179,7 @@ body {
     .cellphoneContent {
         width: 400px;
         height: 400px;
+        margin-left: 0px;
     }
 
     
