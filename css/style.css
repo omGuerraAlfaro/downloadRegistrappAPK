@@ -193,9 +193,14 @@ body {
 
 
     .titulo {
-        font-size: 28px;
+        font-size: 45px;
     }
 
+    .celular {        
+        margin-bottom: 50px;
+        width: 90%;
+        height: 100%;
+    }
 
 
 }
