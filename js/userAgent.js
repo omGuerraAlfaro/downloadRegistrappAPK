@@ -1,7 +1,7 @@
 
 window.addEventListener('load', () => {
     const tipo = document.getElementById(`tipoUserAgent`);
-    if (navigator.userAgent.includes('Mobile' && 'Windows')) { // (xxx && 'Windows') se muestra... verificar palabra cable para telefonos
+    if (navigator.userAgent.includes('Mobile')) { // (xxx && 'Windows') se muestra... verificar palabra cable para telefonos
         tipo.innerHTML =    `<a href="http://www.google.com">
                                 <div class="contenedorAPK">
                                    <button class="buttonAnimated">
