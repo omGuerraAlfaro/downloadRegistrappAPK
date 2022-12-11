@@ -58,25 +58,16 @@ body {
     -webkit-backdrop-filter: blur(15px);
 }
 
-.cellphoneContent::before {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    width: 600px;
-    height: 550px;
-    content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 67% 33% 41% 59% / 40% 26% 74% 60%;
+.cellphoneContent::before {    
     background-image: linear-gradient(var(--rotate),
-            #5ddcff,
-            #3c67e3 43%,
-            #4e00c2);
+            #ff3300,
+            #f3a237 43%,
+            #ffffff);
     position: absolute;
     z-index: -3;
     top: -1%;
     left: -2%;
     animation: spin 2.5s linear infinite;
-
 }
 
 .cellphoneContent::after {
@@ -87,14 +78,14 @@ body {
     right: 0;
     z-index: -3;
     height: 100%;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     transform: scale(0.8);
     filter: blur(calc(var(--card-height) / 6));
     background-image: linear-gradient(var(--rotate),
-            #5ddcff,
-            #3c67e3 43%,
-            #4e00c2);
+            #5563b4,
+            #f3a237 43%,
+            #ffffff);
     opacity: 1;
     transition: opacity 0.5s;
     animation: spin 3.2s linear infinite;
@@ -125,12 +116,13 @@ body {
 }
 
 
-.parrafo{
+.parrafo {
     margin-top: 20px;
     font-size: smaller;
     color: #ffffff;
     text-align: start;
 }
+
 /* *********************************** */
 
 .buttonAnimated {
@@ -182,7 +174,7 @@ body {
         margin-left: 0px;
     }
 
-    
+
 
     .buttonAnimated {
         width: 300px;
@@ -190,7 +182,7 @@ body {
     }
 
 
-    .titulo{
+    .titulo {
         font-size: 28px;
     }
 
