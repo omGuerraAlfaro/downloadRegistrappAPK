@@ -5,7 +5,7 @@
 
 body {
     min-height: 100vh;
-    background: #212534;
+    background: rgb(33, 37, 52);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -101,6 +101,9 @@ body {
     animation: spin 3.2s linear infinite;
 }
 
+.imagen{
+    width: 300px;
+}
 
 
 .celular {

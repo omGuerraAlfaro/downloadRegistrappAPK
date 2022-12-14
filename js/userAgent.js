@@ -23,17 +23,10 @@ const firebaseConfig = {
 window.addEventListener('load', () => {
     const tipo = document.getElementById(`tipoUserAgent`);
     if (navigator.userAgent.includes('Windows')) { // (xxx && 'Windows') se muestra... verificar palabra cable para telefonos
-        tipo.innerHTML = `<img src="https://i.postimg.cc/QdjJ9jp3/11111.jpg" alt="">
+        tipo.innerHTML = `<img class="imagen" src="https://i.postimg.cc/4NrP76HM/registrapp.png">
         <br>
         <span class="parrafo">Escanear QR para descargar APK</span>`
     }
-    //  else {
-    //     tipo.innerHTML =    `<div class="contenedorAPK">
-    //                             <button onclick="viewCelular()" class="buttonAnimated">
-    //                                 <span>Descargar Aquí</span>
-    //                             </button>
-    //                         </div>`
-    // }
 });
 
 
