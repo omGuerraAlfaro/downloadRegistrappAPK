@@ -17,41 +17,43 @@ const firebaseConfig = {
     appId: "1:912776550064:web:3349b0ee99765805eecd75",
     measurementId: "G-NH5WHMSDX8"
 };
-function celular(){
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-    
-        // Initialize Cloud Storage and get a reference to the service
-        const storage = getStorage(app);
-    
-        getDownloadURL(ref(storage, 'RegistrApp.apk')).then((url) => {
-                console.log(url)
-                var anchor = document.createElement('a');
-                anchor.href = url;
-                anchor.click();
-            })
-            .catch((error) => {
-                // Handle any errors
-                console.log(error);
-            });
-}
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Cloud Storage and get a reference to the service
+const storage = getStorage(app);
+document.getElementById("download").addEventListener('click', function () {
+
+    getDownloadURL(ref(storage, 'RegistrApp.apk')).then((url) => {
+        console.log(url)
+        var anchor = document.createElement('a');
+        anchor.href = url;
+        anchor.click();
+    })
+        .catch((error) => {
+            // Handle any errors
+            console.log(error);
+        });
+});
+
 
 
 
 window.addEventListener('load', () => {
     const tipo = document.getElementById(`tipoUserAgent`);
     if (navigator.userAgent.includes('Windows')) { // (xxx && 'Windows') se muestra... verificar palabra cable para telefonos
-        tipo.innerHTML =    `<img src="https://i.postimg.cc/QdjJ9jp3/11111.jpg" alt="">
+        tipo.innerHTML = `<img src="https://i.postimg.cc/QdjJ9jp3/11111.jpg" alt="">
                             <br>
                             
-                            <span onload="celular()" class="parrafo">Escanear QR para descargar APK</span>`
+                            <span class="parrafo">Escanear QR para descargar APK</span>`
     } else {
         celular();
-        tipo.innerHTML =    `
+        tipo.innerHTML = `
                             <a href="http://www.google.com">
                                 <div class="contenedorAPK">
                                 
-                                   <button class="buttonAnimated">
+                                   <button id="download" class="buttonAnimated">
                                         <span>Descargar Aquí</span>
                                    </button>
                                 </div>
