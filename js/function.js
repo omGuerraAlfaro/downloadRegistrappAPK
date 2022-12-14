@@ -6,14 +6,11 @@ window.addEventListener('load', () => {
                                 <br>        
                             <span class="parrafo">Escanear QR para descargar APK</span>`
     } else {
-        tipo.innerHTML =    `
-                            <a href="http://www.google.com">
-                                <div class="contenedorAPK">        
-                                    <button id="download" class="buttonAnimated">
-                                        <span>Descargar Aquí</span>
-                                    </button>
-                                </div>
-                            </a>`
+        tipo.innerHTML =    `<div class="contenedorAPK">        
+                                <button id="download" class="buttonAnimated">
+                                    <span>Descargar Aquí</span>
+                                </button>
+                            </div>`
     }
 });
 
