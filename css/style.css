@@ -101,7 +101,7 @@ body {
     animation: spin 3.2s linear infinite;
 }
 
-.imagen{
+.imagen {
     width: 300px;
 }
 
@@ -200,7 +200,7 @@ body {
     }
 
     .celular {
-        margin-top: 50px;        
+        margin-top: 50px;
         margin-bottom: 50px;
         width: 100%;
         height: 100%;
