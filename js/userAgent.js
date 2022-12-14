@@ -1,20 +1,3 @@
-
-window.addEventListener('load', () => {
-    const tipo = document.getElementById(`tipoUserAgent`);
-    if (navigator.userAgent.includes('Windows')) { // (xxx && 'Windows') se muestra... verificar palabra cable para telefonos
-        tipo.innerHTML =    `<img src="https://i.postimg.cc/QdjJ9jp3/11111.jpg" alt="">
-                                <br>        
-                            <span class="parrafo">Escanear QR para descargar APK</span>`
-    } else {
-        tipo.innerHTML =    `<div class="contenedorAPK">        
-                                <button id="download" class="buttonAnimated">
-                                    <span>Descargar Aquí</span>
-                                </button>
-                            </div>`
-    }
-});
-
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
@@ -34,21 +17,49 @@ const firebaseConfig = {
     measurementId: "G-NH5WHMSDX8"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
 
-// Initialize Cloud Storage and get a reference to the service
-const storage = getStorage(app);
-document.getElementById("download").addEventListener('click', function () {
+
+
+window.addEventListener('load', () => {
+    const tipo = document.getElementById(`tipoUserAgent`);
+    if (navigator.userAgent.includes('Windows')) { // (xxx && 'Windows') se muestra... verificar palabra cable para telefonos
+        tipo.innerHTML = `<img src="https://i.postimg.cc/QdjJ9jp3/11111.jpg" alt="">
+        <br>
+        <span class="parrafo">Escanear QR para descargar APK</span>`
+    }
+    //  else {
+    //     tipo.innerHTML =    `<div class="contenedorAPK">
+    //                             <button onclick="viewCelular()" class="buttonAnimated">
+    //                                 <span>Descargar Aquí</span>
+    //                             </button>
+    //                         </div>`
+    // }
+});
+
+
+const consultURL = document.getElementById('download')
+consultURL.addEventListener('click', function () {
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    // Initialize Cloud Storage and get a reference to the service
+    const storage = getStorage(app);
+
+
 
     getDownloadURL(ref(storage, 'RegistrApp.apk')).then((url) => {
         console.log(url)
         var anchor = document.createElement('a');
         anchor.href = url;
         anchor.click();
-    })
-        .catch((error) => {
-            // Handle any errors
-            console.log(error);
-        });
+    }).catch((error) => {
+        // Handle any errors
+        console.log(error);
+    });
+
 });
+
+
+
+
