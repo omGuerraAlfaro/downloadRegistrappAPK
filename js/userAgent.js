@@ -1,4 +1,23 @@
 
+window.addEventListener('load', () => {
+    const tipo = document.getElementById(`tipoUserAgent`);
+    if (navigator.userAgent.includes('Windows')) { // (xxx && 'Windows') se muestra... verificar palabra cable para telefonos
+        tipo.innerHTML =    `<img src="https://i.postimg.cc/QdjJ9jp3/11111.jpg" alt="">
+                                <br>        
+                            <span class="parrafo">Escanear QR para descargar APK</span>`
+    } else {
+        tipo.innerHTML =    `
+                            <a href="http://www.google.com">
+                                <div class="contenedorAPK">        
+                                    <button id="download" class="buttonAnimated">
+                                        <span>Descargar Aquí</span>
+                                    </button>
+                                </div>
+                            </a>`
+    }
+});
+
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
@@ -35,28 +54,4 @@ document.getElementById("download").addEventListener('click', function () {
             // Handle any errors
             console.log(error);
         });
-});
-
-
-
-
-window.addEventListener('load', () => {
-    const tipo = document.getElementById(`tipoUserAgent`);
-    if (navigator.userAgent.includes('Windows')) { // (xxx && 'Windows') se muestra... verificar palabra cable para telefonos
-        tipo.innerHTML = `<img src="https://i.postimg.cc/QdjJ9jp3/11111.jpg" alt="">
-                            <br>
-                            
-                            <span class="parrafo">Escanear QR para descargar APK</span>`
-    } else {
-        celular();
-        tipo.innerHTML = `
-                            <a href="http://www.google.com">
-                                <div class="contenedorAPK">
-                                
-                                   <button id="download" class="buttonAnimated">
-                                        <span>Descargar Aquí</span>
-                                   </button>
-                                </div>
-                            </a>`
-    }
 });
